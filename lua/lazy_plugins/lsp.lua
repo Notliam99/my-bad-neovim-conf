@@ -9,6 +9,7 @@ return {
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
 		"hrsh7th/nvim-cmp",
+        "hrsh7th/cmp-emoji",
 		"L3MON4D3/LuaSnip",
 		"saadparwaiz1/cmp_luasnip",
 		"j-hui/fidget.nvim",
@@ -17,7 +18,12 @@ return {
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
-			}
+			},
+            format_on_save = {
+                -- These options will be passed to conform.format()
+                timeout_ms = 500,
+                lsp_format = "fallback",
+            }
 		})
 		local cmp = require('cmp')
 		local cmp_lsp = require("cmp_nvim_lsp")
@@ -92,9 +98,11 @@ return {
 			sources = cmp.config.sources({
 				{ name = 'nvim_lsp' },
 				{ name = 'luasnip' }, -- For luasnip users.
-			}, {
-					{ name = 'buffer' },
-				})
+				{ name = 'buffer' },
+                { name = 'path' },
+                { name = 'emoji' },
+                { name = 'crates' }
+			})
 		})
 
 		vim.diagnostic.config({
