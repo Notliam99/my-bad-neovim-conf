@@ -28,4 +28,4 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-vim.g.neovide_transparency = 0.8
+vim.g.neovide_opacity = 0.8
