@@ -107,3 +107,13 @@ vim.api.nvim_set_keymap('', '<C-S-v>', '+p<CR>', { noremap = true, silent = true
 vim.api.nvim_set_keymap('!', '<C-S-v>', '<C-R>+', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<C-S-V>', '<C-R>+', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-S-v>', '<C-R>+', { noremap = true, silent = true })
+
+local n_opts = { silent = true, noremap = true }
+
+-- -- Stay in indent mode
+-- -- Visual mode
+-- keymap('v', '<', '<gv', n_opts)
+-- keymap('v', '>', '>gv', n_opts)
+-- -- Normal mode
+-- keymap('n', '<', '<<', n_opts)
+-- keymap('n', '>', '>>', n_opts)
