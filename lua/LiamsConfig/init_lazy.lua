@@ -29,6 +29,12 @@ require("lazy").setup({
 		{ import = "lazy_plugins" }
 	},
 
+    rocks = {
+        enabled = false,
+    },
+
+    install = { missing= false},
+
 	-- automaticly checks for updates
 	checker = { enabled = true }
 })
